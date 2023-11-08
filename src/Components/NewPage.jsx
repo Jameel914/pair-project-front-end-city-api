@@ -36,7 +36,7 @@ function NewPage() {
   return (
     <>
       <h2 className="mt-3 px-5">New</h2>
-      <div>
+      <div className="m-5 px-5" style={{ border: "1px solid grey" }}>
         <form onSubmit={handleSubmit}>
           <div>
             <label className="px-5 mt-5 fs-5 fw-bold">Name</label>
@@ -107,15 +107,16 @@ function NewPage() {
           <div>
             <label className="px-5 mt-4 fs-5 fw-bold">Is_Capital</label>
             <input
-              //style={{ width: "50%" }}
-              //className="form-control form-control-lg"
               type="checkbox"
               aria-label=".form-control-lg example"
               checked={is_capital}
               onChange={(e) => setIs_Capital(e.target.checked)}
             />
           </div>
-          <button type="submit" className="btn btn-secondary px-5 me-5 mt-5">
+          <button
+            type="submit"
+            className="btn btn-secondary px-5 me-5 mt-5 mb-5"
+          >
             Submit
           </button>
         </form>
