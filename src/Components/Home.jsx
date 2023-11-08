@@ -1,7 +1,8 @@
 import React from "react";
+import IndexPage from "./IndexPage";
 
 function Home() {
-  return <div>Home</div>;
+  return <IndexPage />;
 }
 
 export default Home;

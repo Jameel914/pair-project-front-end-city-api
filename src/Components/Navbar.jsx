@@ -2,9 +2,9 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary py-4 px-3 ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand fs-1 fw-bold" href="/">
           CITIES
         </a>
         <button
@@ -19,11 +19,19 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav ">
-            <a className="nav-link active" aria-current="page" href={"/"}>
+          <div className="navbar-nav px-5">
+            <a
+              className="nav-link active px-5 fs-2"
+              aria-current="page"
+              href={"/"}
+            >
               Home
             </a>
-            <a className="nav-link active" aria-current="page" href={"/about"}>
+            <a
+              className="nav-link active px-5 fs-2"
+              aria-current="page"
+              href={"/about"}
+            >
               About
             </a>
           </div>
