@@ -46,10 +46,13 @@ function EditPage() {
         currency: currency,
         is_capital: is_capital,
       });
-      navigate("/cities");
     } catch (error) {
       console.log(error);
     }
+  }
+
+  function handleButton() {
+    navigate("/cities");
   }
 
   return (
@@ -124,19 +127,18 @@ function EditPage() {
             />
           </div>
           <div>
-            <label className="px-5 mt-4 fs-5 fw-bold">Is_Capital</label>
+            <label className="px-5 mt-4 fs-5 fw-bold">Capital</label>
             <input
-              style={{ width: "50%" }}
-              className="form-control form-control-lg"
-              type="boolean"
+              type="checkbox"
               aria-label=".form-control-lg example"
-              value={is_capital}
-              onChange={(e) => setIs_Capital(e.target.value)}
+              checked={is_capital}
+              onChange={(e) => setIs_Capital(e.target.checked)}
             />
           </div>
           <button
             type="submit"
             className="btn btn-secondary px-5 me-5 mt-5 mb-5"
+            onClick={handleButton}
           >
             Submit
           </button>

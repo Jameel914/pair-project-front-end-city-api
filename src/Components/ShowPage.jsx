@@ -60,9 +60,9 @@ function ShowPage() {
           alt={oneCity.name}
         />
         <div className="card-body fs-2 text-center text-secondary">
-          <p className="card-text">{oneCity.population} Millions</p> <hr />
+          <p className="card-text">{oneCity.population} Million</p> <hr />
           <p className="card-text">{oneCity.area} Square Miles</p> <hr />
-          <p className="card-text">{oneCity.annual_visitors} Millions</p> <hr />
+          <p className="card-text">{oneCity.annual_visitors} Million</p> <hr />
           <p className="card-text">{oneCity.currency}</p> <hr />
           <p className="card-text">{oneCity.is_capital}</p>
         </div>
