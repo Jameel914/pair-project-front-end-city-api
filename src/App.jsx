@@ -7,6 +7,7 @@ import ShowPage from "./Components/ShowPage";
 import EditPage from "./Components/EditPage";
 import NewPage from "./Components/NewPage";
 import PageNotFound from "./Components/PageNotFound";
+import { Navigate } from "react-router-dom";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/cities/:id" element={<ShowPage />} />
           <Route path="/cities/:id/edit" element={<EditPage />} />
           <Route path="/cities/new" element={<NewPage />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="/notfound" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate to="/notfound" />} />
         </Routes>
       </Router>
     </>

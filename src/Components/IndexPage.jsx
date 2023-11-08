@@ -21,7 +21,7 @@ function IndexPage() {
   }
 
   return (
-    <div>
+    <div style={{ border: "2px solid grey" }}>
       <h2 className="mt-3 px-5">Index</h2>
       {allcities.map((item) => {
         return (

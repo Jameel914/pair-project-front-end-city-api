@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -17,7 +17,7 @@ function NewPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await axios.post(`${API}/cities/new`, {
+      await axios.post(`${API}/cities`, {
         name: name,
         image: image,
         population: population,
@@ -107,12 +107,12 @@ function NewPage() {
           <div>
             <label className="px-5 mt-4 fs-5 fw-bold">Is_Capital</label>
             <input
-              style={{ width: "50%" }}
-              className="form-control form-control-lg"
-              type="boolean"
+              //style={{ width: "50%" }}
+              //className="form-control form-control-lg"
+              type="checkbox"
               aria-label=".form-control-lg example"
-              value={is_capital}
-              onChange={(e) => setIs_Capital(e.target.value)}
+              checked={is_capital}
+              onChange={(e) => setIs_Capital(e.target.checked)}
             />
           </div>
           <button type="submit" className="btn btn-secondary px-5 me-5 mt-5">

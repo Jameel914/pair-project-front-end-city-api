@@ -15,10 +15,15 @@ function ShowPage() {
   async function fetchOneCity() {
     try {
       let result = await axios.get(`${API}/cities/${id}`);
-      console.log(result.data);
-      setOneCity(result.data);
+      if (!result.data.id) {
+        navigate("/notfound");
+      } else {
+        setOneCity(result.data);
+      }
+      //console.log(result.data);
     } catch (error) {
       console.log(error);
+      navigate("/notfound");
     }
   }
 
@@ -40,7 +45,7 @@ function ShowPage() {
   }
 
   return (
-    <div>
+    <div className="d-flex justity-content-center">
       <h2 className="mt-3 px-5">Show</h2>
 
       <div className="card mb-5 mt-5 " style={{ width: "1000px" }}>
@@ -58,32 +63,33 @@ function ShowPage() {
           <p className="card-text">{oneCity.population} Millions</p> <hr />
           <p className="card-text">{oneCity.area} Square Miles</p> <hr />
           <p className="card-text">{oneCity.annual_visitors} Millions</p> <hr />
-          <p className="card-text">{oneCity.currency}</p>
+          <p className="card-text">{oneCity.currency}</p> <hr />
           <p className="card-text">{oneCity.is_capital}</p>
         </div>
-      </div>
-      <div>
-        <button
-          type="button"
-          className="btn btn-secondary px-5 me-5"
-          onClick={handleBackButton}
-        >
-          BACK
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary px-5 me-5"
-          onClick={handleEditButton}
-        >
-          EDIT
-        </button>
-        <button
-          type="button"
-          className="btn btn-secondary px-5 me-5"
-          onClick={handleDeleteButton}
-        >
-          DELETE
-        </button>
+
+        <div className="m-5 d-flex justify-content-center">
+          <button
+            type="button"
+            className="btn btn-secondary px-5 me-5"
+            onClick={handleBackButton}
+          >
+            BACK
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary px-5 me-5"
+            onClick={handleEditButton}
+          >
+            EDIT
+          </button>
+          <button
+            type="button"
+            className="btn btn-secondary px-5 me-5"
+            onClick={handleDeleteButton}
+          >
+            DELETE
+          </button>
+        </div>
       </div>
     </div>
   );
