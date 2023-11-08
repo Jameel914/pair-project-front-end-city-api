@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  function newCityButton() {
+    navigate("/cities/new");
+  }
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary py-4 px-3 ">
       <div className="container-fluid">
@@ -36,7 +43,11 @@ function Navbar() {
             </a>
           </div>
           <div className="ms-auto">
-            <button type="button" className="btn btn-secondary ">
+            <button
+              type="button"
+              className="btn btn-secondary "
+              onClick={newCityButton}
+            >
               NEW CITY
             </button>
           </div>
