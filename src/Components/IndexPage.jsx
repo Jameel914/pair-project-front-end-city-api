@@ -45,7 +45,9 @@ function IndexPage() {
                 alt={item.name}
               />
               <div className="card-body fs-2 text-center text-secondary">
-                <p className="card-text">{item.annual_visitors} Million</p>
+                <p className="card-text">
+                  {item.annual_visitors} Million Visitors
+                </p>
               </div>
             </Link>
           </div>

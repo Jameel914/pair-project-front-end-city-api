@@ -35,7 +35,8 @@ function EditPage() {
     }
   }
 
-  async function handleSubmit() {
+  async function handleSubmit(e) {
+    e.preventDefault();
     try {
       await axios.put(`${API}/cities/${id}`, {
         name: name,
@@ -46,13 +47,10 @@ function EditPage() {
         currency: currency,
         is_capital: is_capital,
       });
+      navigate("/cities");
     } catch (error) {
       console.log(error);
     }
-  }
-
-  function handleButton() {
-    navigate("/cities");
   }
 
   return (
@@ -138,7 +136,6 @@ function EditPage() {
           <button
             type="submit"
             className="btn btn-secondary px-5 me-5 mt-5 mb-5"
-            onClick={handleButton}
           >
             Submit
           </button>
