@@ -2,10 +2,10 @@ import React from "react";
 
 function PageNotFound() {
   return (
-    <div>
+    <div style={{ border: "2px solid grey" }}>
       <h2
         className="d-flex justify-content-center m-5"
-        style={{ fontSize: "200px", color: "red" }}
+        style={{ fontSize: "100px", color: "red" }}
       >
         Page Not Found!
       </h2>
