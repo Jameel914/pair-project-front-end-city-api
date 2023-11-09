@@ -1,8 +1,18 @@
-# React + Vite
+# Cities in Europe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The purpose of the app is for the user to easily navigate to the name of the city, view an image of the city, see the population, see the area of the city in square miles , the number of annual visitors, the currency and if the city is the capital.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend - React Js
+BackEnd - Express Js
+Database - Postgres
+Design - Bootstrap & css
+
+- [Frontend deployed link](https://pair-project-city-api.netlify.app/cities)
+
+- [Backend deployed link](https://cities-api-9q5v.onrender.com/cities/)
+
+- [Trello board](https://trello.com/b/Q7oooh03/pair-project-cities-in-europe)
+
+- [Backend repository](https://github.com/Jameel914/pair-project-back-end)
