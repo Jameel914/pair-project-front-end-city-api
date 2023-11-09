@@ -21,8 +21,16 @@ function IndexPage() {
   }
 
   return (
-    <div className="px-5" style={{ border: "2px solid grey" }}>
-      <h2 className="mt-3 px-5">Index</h2>
+    <div
+      className="px-5"
+      style={{
+        border: "2px solid grey",
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        justifyContent: "space-evenly",
+        margin: "5px",
+      }}
+    >
       {allcities.map((item) => {
         return (
           <div
