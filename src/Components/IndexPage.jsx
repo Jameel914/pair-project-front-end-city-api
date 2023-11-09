@@ -30,19 +30,21 @@ function IndexPage() {
             className="card mb-5 mt-5"
             style={{ width: "700px" }}
           >
-            <div className="card-header fs-2 text-uppercase text-center text-secondary">
-              {item.name}
-            </div>
+            <Link to={`/cities/${item.id}`}>
+              <div className="card-header fs-2 text-uppercase text-center text-secondary">
+                {item.name}
+              </div>
 
-            <img
-              className="card-img-top"
-              style={{ height: "500px" }}
-              src={item.image}
-              alt={item.name}
-            />
-            <div className="card-body fs-2 text-center text-secondary">
-              <p className="card-text">{item.annual_visitors} Million</p>
-            </div>
+              <img
+                className="card-img-top"
+                style={{ height: "500px" }}
+                src={item.image}
+                alt={item.name}
+              />
+              <div className="card-body fs-2 text-center text-secondary">
+                <p className="card-text">{item.annual_visitors} Million</p>
+              </div>
+            </Link>
           </div>
         );
       })}
