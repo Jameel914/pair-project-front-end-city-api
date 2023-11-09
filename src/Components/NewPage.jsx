@@ -105,7 +105,7 @@ function NewPage() {
             />
           </div>
           <div>
-            <label className="px-5 mt-4 fs-5 fw-bold">Is_Capital</label>
+            <label className="px-5 mt-4 fs-5 fw-bold">Capital</label>
             <input
               type="checkbox"
               aria-label=".form-control-lg example"
