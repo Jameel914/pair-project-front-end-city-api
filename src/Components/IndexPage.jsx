@@ -30,7 +30,10 @@ function IndexPage() {
             className="card mb-5 mt-5"
             style={{ width: "700px" }}
           >
-            <Link to={`/cities/${item.id}`}>
+            <Link
+              to={`/cities/${item.id}`}
+              style={{ textDecorationColor: "grey" }}
+            >
               <div className="card-header fs-2 text-uppercase text-center text-secondary">
                 {item.name}
               </div>
